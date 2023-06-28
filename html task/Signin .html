@@ -1,0 +1,183 @@
+<html>
+
+<head>
+  <title>Signin page</title>
+  <style>
+    .footer-style {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #0f4aec;
+      color: white;
+      text-align: center;
+    }
+
+    input {
+      border: 1px solid black;
+    }
+
+    .error-message {
+      color: red;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(167, 186, 189);
+    
+    }
+    
+    .topnav img {
+      width: 105px; /* Adjust the size of the logo as needed */
+      height: auto;
+      margin-right: 10px; /* Adjust the spacing between the logo and text */
+    }
+    
+    .topnav a {
+      float:right;
+      color: #0a0a0a;
+      text-align: center;
+      padding: 20px 16px;
+      padding-left: 30px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: rgb(230, 18, 142);
+    }
+    
+    .topnav a:active {
+      background-color: #d6b211;
+      color: white;
+    }
+    img{
+        width: 120px;
+        padding: 10px;
+    }
+    .topnav {
+            overflow: hidden;
+            background-color: rgb(100, 190, 204);
+          
+          }
+          
+          .topnav img {
+            width: 105px; /* Adjust the size of the logo as needed */
+            height: auto;
+            margin-right: 10px; /* Adjust the spacing between the logo and text */
+          }
+          
+          .topnav a {
+            float:right;
+            color: #0e0d0d;
+            text-align: center;
+            padding: 20px 16px;
+            padding-left: 30px;
+            text-decoration: none;
+            font-size: 17px;
+          }
+          
+          .topnav a:hover {
+            background-color: #ddd;
+            color: rgb(230, 18, 142);
+          }
+          
+          .topnav a:active {
+            background-color: #d6b211;
+            color: white;
+          }
+          img{
+              width: 120px;
+              padding: 10px;
+          }
+          .container
+          {
+            width: 300px;
+            background-color: rgb(167, 186, 189);
+            padding: 5px;
+            border-color:#d6b211
+          }
+    
+  </style>
+
+</head>
+
+<body
+  style="background-image: url('sig.jpg');background-repeat:no-repeat;background-attachment:fixed;background-size:cover">
+  <script>
+    function validateEmail(input) {
+      var email = input.value;
+      var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var isValid = pattern.test(email);
+      var errorElement = document.getElementById("emailError");
+
+      if (isValid) {
+        input.style.borderColor = 'green';
+        errorElement.textContent = '';
+      } else {
+        input.style.borderColor = 'red';
+        errorElement.textContent = 'Invalid email address';
+      }
+    }
+    function validatePassword() 
+    {
+      var password = document.getElementById("password").value;
+      var passwordError = document.getElementById("passwordError");
+      if(password.trim() == "")
+      {
+           passwordError.innerHTML = "Password is required";
+      }
+      else if (password.length<=5) 
+      {
+        passwordError.innerHTML = "Enter valid password with 5 or more characters";
+      
+  }
+}
+</script>
+<div class="topnav">
+  <img src="flyshop.jpg" alt="Logo">
+    <a href="about us .html">About us</a>
+    <a href="Signin .html">Sign in</a>
+    <a href="Signup .html">Sign up</a>
+  <a href="Contact us .html">Contact us</a>
+  <a href="Home.html">Home</a>
+</div>
+<center>
+  <div class="container">
+    <form>
+    <div>
+      <header></span>
+        <h1 style=" height:50px ; width:250px ; padding:10px;color:blue">Signin form</h1>
+    </div>
+    </header>
+    <form>
+      <div style="padding:10px">
+
+        <input style="height:40px;width:230px;border-radius:30px" type="text" id="email" name="email"
+          onfocusout="validateEmail(this)" placeholder="Enter email address">
+        <div id="emailError" class="error-message"></div>
+
+        <div style="padding:10px">
+          <input style="height:40px;width:230px;border-radius:40px" type="password" id="password"
+            onfocusout="validatePassword()" placeholder="Password" name="password">
+          <div id="passwordError" class="error-message"></div>
+        </div>
+        <input type="checkbox" checked="checked" name="remember">Remember me &nbsp;
+        <a href="Forgot password">Forgot password</a></span>
+        <div style="padding:10px">
+          <button style="color:black;background-color: blanchedalmond; font-size:20px;border-radius: 10px;width:100px;height:30px;" type="submit" value="submit" onclick="window.open('Signup .html');" target="_blank"> Signin </button>
+<div style="padding:10px">
+          <label>Not a remember?</label><span>
+            <a href="sign up now">Sign up now</a>
+        </div></span>
+        <div class="footer-style">
+          <p>© 2022 Travels</p>
+        </div>
+        </footer>
+        </div>
+  </center>
+  </form>
+  </div>
+</body>
+
+</html>
